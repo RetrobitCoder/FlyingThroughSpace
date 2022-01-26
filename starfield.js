@@ -3,8 +3,6 @@ class Star {
         this.width = 25;
         this.height = 24;
 
-        this.size_adjust = random(0.5, 10);
-
         this.x = x;
         this.y = y;
 
