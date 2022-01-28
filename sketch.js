@@ -1,3 +1,5 @@
+let astoidfield;
+
 let ship;
 
 let starfield;
@@ -5,6 +7,7 @@ let starfield;
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
+  astoidfield = new AstroidField();
 
   ship = new Ship();
 
@@ -12,6 +15,8 @@ function setup() {
 }
 
 function update() {
+  astoidfield.update();
+
   ship.move();
 }
 
@@ -22,11 +27,15 @@ function draw() {
 
   starfield.display();
 
+  astoidfield.display();
+
   ship.display();
 }
 
 function windowResized(){
   resizeCanvas(windowWidth, windowHeight);
+
+  astoidfield.reposition();
 
   starfield.reposition();
 

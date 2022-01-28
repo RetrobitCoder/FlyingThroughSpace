@@ -39,7 +39,7 @@ class StarField {
         }
     }
 
-    updateStar(star) {
+    repositionStar(star) {
         var x = random(windowWidth);
         var y = random(windowHeight);
 
@@ -47,7 +47,7 @@ class StarField {
     }
 
     reposition() {
-        this.starfield.forEach(s => this.updateStar(s));
+        this.starfield.forEach(s => this.repositionStar(s));
     }
 
     display() {
